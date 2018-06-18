@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+  <h1>Welcome To My Article</h1>
+  <p class="lead"> This Application will have the article updated by the Admin, user can read the article </p>
+  {% if session.logged_in == NULL %}
+    <a href="/register" class="btn btn-primary">Register</a>
+    <a href="/login" class="btn btn-success">Login</a>
+  {% endif%}
+
+</div>
+
+<div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Dashboard</h2>
+            <p>Admin will have the access to upload the Articles. He will have access to edit & delete the Articles.</p>
+            </div>
+          <div class="col-md-6">
+            <h2>Articles</h2>
+            <p>Articles can be read & viewd by all users without logging in to the application. Articles can be of any topics and content.</p>
+          </div>
+        </div>
+        
+{% endblock %}
